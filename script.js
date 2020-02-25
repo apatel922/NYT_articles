@@ -1,16 +1,20 @@
-<script src="https://code.jquery.com/jquery-3.4.1.js"
-			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-			  crossorigin="anonymous"></script>
 
+var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=LhGQy3wkxj7s4h6ipUMbNy1R8s8GG9N1";
 
-var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=" + APIKey;
-var APIKey = "LhGQy3wkxj7s4h6ipUMbNy1R8s8GG9N1";
+var userQuerry = "election";
 
 console.log(queryURL);
+console.log($(".lead"));
 
-$.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function (response) {
-    
-  });
+$(document).ready(function () {
+    console.log("hey");
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+
+        var headline = response.docs[i]
+    });
+});
